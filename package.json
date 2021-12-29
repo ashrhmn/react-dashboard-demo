@@ -1,10 +1,13 @@
 {
     "name": "react-dashboard-demo",
     "version": "0.0.0",
+    "homepage": "https://ashrhmn.github.io/react-dashboard-demo/",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "predeploy": "yarn build",
+        "deploy": "gh-pages -d dist"
     },
     "dependencies": {
         "react": "^17.0.2",

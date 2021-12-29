@@ -1,45 +1,80 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React from "react";
+import CardView from "./components/CardView";
+import Nav from "./components/Nav";
+import SideBar from "./components/SideBar";
+import Slider from "./components/Slider";
+import "./main.scss";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const cardData = [
+    {
+      id: 1,
+      title: "Market Cap",
+      prices: [
+        { title: "SCT Price", price: "$750.00" },
+        { title: "SCT Holdings", price: "$750.00" },
+      ],
+      img: "src/assets/Group 511.png",
+    },
+    {
+      id: 2,
+      title: "Total Locked",
+      prices: [
+        { title: "Circulating Supply", price: "$750.00" },
+        { title: "Total Reflection", price: "$750.00" },
+        { title: "Total Value Locked", price: "$2,573.663" },
+      ],
+      img: "src/assets/Group 586.png",
+    },
+  ];
+
+  const sideBarItems = [
+    {
+      title: "Trade",
+      img: "src/assets/icons8_swap_96px.png",
+    },
+    {
+      title: "Pools",
+      img: "src/assets/icons8_slice_96px.png",
+    },
+    {
+      title: "Airdrop",
+      img: "src/assets/icons8_note_48px.png",
+    },
+    {
+      title: "Assets",
+      img: "src/assets/icons8_NFT_128px.png",
+    },
+    {
+      title: "Stakes",
+      img: "src/assets/icons8_rocket_96px.png",
+    },
+    {
+      title: "Vote",
+      img: "src/assets/icons8_lock_screen_96px.png",
+    },
+    {
+      title: "Stats",
+      img: "src/assets/icons8_investment_96px.png",
+    },
+  ];
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+    <div className="container">
+      <SideBar items={sideBarItems} />
+      <div className="app-view">
+        <Nav />
+        <div className="slide-card-view">
+          <Slider />
+          <div className="card-container">
+            {cardData.map((data) => (
+              <CardView key={data.id} data={data} />
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
