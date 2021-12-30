@@ -1,5 +1,10 @@
 import React from "react";
 
+import avatar from "../assets/avatar.png";
+import toogleThemeIcon from "../assets/monitor-levels.png";
+import notificationIcon from "../assets/icons8_notification_96px_1.png";
+import arrowIcon from "../assets/icons8_expand_arrow_96px_1.png";
+
 const Nav = () => {
   return (
     <nav>
@@ -11,27 +16,15 @@ const Nav = () => {
           name="search"
           placeholder="Search"
         />
-        <img
-          className="toogleThemeBtn"
-          src="src/assets/monitor-levels.png"
-          alt=""
-        />
+        <img className="toogleThemeBtn" src={toogleThemeIcon} alt="" />
         <div>
           <span className="legend">Alia John</span>
           <div>
-            <img
-              className="ico"
-              src="src/assets/icons8_notification_96px_1.png"
-              alt=""
-            />
-            <img
-              className="ico"
-              src="src/assets/icons8_expand_arrow_96px_1.png"
-              alt=""
-            />
+            <img className="ico" src={notificationIcon} alt="" />
+            <img className="ico" src={arrowIcon} alt="" />
           </div>
         </div>
-        <img className="avatar" src="src/assets/avatar.png" alt="" />
+        <img className="avatar" src={avatar} alt="" />
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="nav-menu"

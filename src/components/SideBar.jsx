@@ -1,11 +1,13 @@
 import React from "react";
 
+import sideBarIcon from '../assets/PNG_image_6-removebg-preview.png'
+
 const SideBar = ({ items }) => {
   return (
     <div className="sidebar">
       <img
         style={{ width: "250px" }}
-        src="src/assets/PNG_image_6-removebg-preview.png"
+        src={sideBarIcon}
         alt=""
       />
       <div className="nav-items">

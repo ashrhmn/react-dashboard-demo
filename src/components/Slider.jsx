@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from "react";
 
+// import { ethereum1, ethereum2, ethereum3 } from "../assets";
+
+import ethereum1Img from '../assets/ethereum1.jpg'
+import ethereum2Img from '../assets/ethereum2.jpg'
+import ethereum3Img from '../assets/ethereum3.jpg'
+
 const Slider = () => {
   const [imgIndex, setImgIndex] = useState(0);
   const [intervalId, setIntervalId] = useState(0);
   const images = [
-    "src/assets/ethereum1.jpg",
-    "src/assets/ethereum2.jpg",
-    "src/assets/ethereum3.jpg",
+      ethereum1Img,
+      ethereum2Img,
+      ethereum3Img,
   ];
   const handleIndicatorClick = (index) => {
     // clearInterval(intervalId);
@@ -28,9 +34,9 @@ const Slider = () => {
     if (index <= imgIndex) return "prev";
   };
 
-//   useEffect(() => {
-//     setIntervalId(setInterval(nextImage, 1000));
-//   }, []);
+  //   useEffect(() => {
+  //     setIntervalId(setInterval(nextImage, 1000));
+  //   }, []);
 
   return (
     <div>

@@ -5,6 +5,17 @@ import SideBar from "./components/SideBar";
 import Slider from "./components/Slider";
 import "./main.scss";
 
+import cardImg1 from "./assets/Group 511.png"
+import cardImg2 from "./assets/Group 586.png"
+
+import tradeIcon from"./assets/icons8_swap_96px.png"
+import poolsIcon from "./assets/icons8_slice_96px.png"
+import airdropIcon from "./assets/icons8_note_48px.png"
+import assetsIcon from "./assets/icons8_NFT_128px.png"
+import stakesIcon from "./assets/icons8_rocket_96px.png"
+import voteIcon from "./assets/icons8_lock_screen_96px.png"
+import statsIcon from "./assets/icons8_investment_96px.png"
+
 const App = () => {
   const cardData = [
     {
@@ -14,7 +25,7 @@ const App = () => {
         { title: "SCT Price", price: "$750.00" },
         { title: "SCT Holdings", price: "$750.00" },
       ],
-      img: "src/assets/Group 511.png",
+      img: cardImg1,
     },
     {
       id: 2,
@@ -24,38 +35,38 @@ const App = () => {
         { title: "Total Reflection", price: "$750.00" },
         { title: "Total Value Locked", price: "$2,573.663" },
       ],
-      img: "src/assets/Group 586.png",
+      img: cardImg2,
     },
   ];
 
   const sideBarItems = [
     {
       title: "Trade",
-      img: "src/assets/icons8_swap_96px.png",
+      img: tradeIcon,
     },
     {
       title: "Pools",
-      img: "src/assets/icons8_slice_96px.png",
+      img: poolsIcon,
     },
     {
       title: "Airdrop",
-      img: "src/assets/icons8_note_48px.png",
+      img: airdropIcon,
     },
     {
       title: "Assets",
-      img: "src/assets/icons8_NFT_128px.png",
+      img: assetsIcon,
     },
     {
       title: "Stakes",
-      img: "src/assets/icons8_rocket_96px.png",
+      img: stakesIcon,
     },
     {
       title: "Vote",
-      img: "src/assets/icons8_lock_screen_96px.png",
+      img: voteIcon,
     },
     {
       title: "Stats",
-      img: "src/assets/icons8_investment_96px.png",
+      img: statsIcon,
     },
   ];
 
