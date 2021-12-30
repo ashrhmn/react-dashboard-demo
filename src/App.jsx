@@ -15,6 +15,7 @@ import assetsIcon from "./assets/icons8_NFT_128px.png"
 import stakesIcon from "./assets/icons8_rocket_96px.png"
 import voteIcon from "./assets/icons8_lock_screen_96px.png"
 import statsIcon from "./assets/icons8_investment_96px.png"
+import HistoryView from "./components/HistoryView";
 
 const App = () => {
   const cardData = [
@@ -74,7 +75,7 @@ const App = () => {
     <div className="container">
       <SideBar items={sideBarItems} />
       <div className="app-view">
-        <Nav />
+        <Nav menuItem={sideBarItems} />
         <div className="slide-card-view">
           <Slider />
           <div className="card-container">
@@ -83,6 +84,7 @@ const App = () => {
             ))}
           </div>
         </div>
+        <HistoryView/>
       </div>
     </div>
   );

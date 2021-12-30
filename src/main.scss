@@ -244,3 +244,76 @@ nav {
         padding: 10px;
     }
 }
+
+.history-view {
+    color: white;
+    margin: 20px;
+    font-size: 20px;
+    width: 90%;
+    overflow-y: scroll;
+    .table-image {
+        width: 30px;
+    }
+    .history-table {
+        margin: 0 auto;
+    }
+    th {
+        padding: 10px;
+    }
+    td {
+        padding: 10px;
+        text-align: center;
+        button {
+            width: 120px;
+            padding: 12px 16px;
+            border-radius: 20px;
+            border: none;
+            color: white;
+        }
+        .blue-button {
+            background-color: #1b6dfe;
+        }
+        .purple-button {
+            background-color: #31289c;
+        }
+        .orange-button {
+            background-color: #fb454d;
+        }
+    }
+}
+
+%menu {
+    color: white;
+    position: fixed;
+    background-color: #09091f;
+    inset: 0;
+    z-index: 30;
+    transition: transform 150ms linear;
+    display: none;
+    @include mobile-view() {
+        display: block;
+    }
+    .btn-close {
+        position: absolute;
+        width: 40px;
+        right: 30px;
+        top: 30px;
+    }
+    .menu-items {
+        .menu-icon {
+            margin: 0 25vw;
+            width: 50%;
+            max-width: 200px;
+        }
+    }
+}
+
+.menu-show {
+    @extend %menu;
+    transform: translateX(0%);
+}
+
+.menu-hide {
+    @extend %menu;
+    transform: translateX(-100%);
+}
