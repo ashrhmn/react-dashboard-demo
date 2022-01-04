@@ -1,0 +1,12 @@
+@use "../styles/" as *;
+.right-cards-container {
+    display: flex;
+    flex-direction: column;
+    @include tablet-view() {
+        flex-direction: row;
+        gap: 1rem;
+    }
+    @include desktop-view() {
+        flex-direction: column;
+    }
+}

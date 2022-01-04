@@ -1,0 +1,50 @@
+@use "../styles/" as *;
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(17, 24, 46);
+    padding: 2rem;
+    margin: 2rem auto;
+    // max-width: 50rem;
+    // min-width: 40rem;
+    width: 90%;
+    gap: 1rem;
+    @include tablet-view {
+        max-width: 40vw;
+        min-width: unset;
+    }
+    @include desktop-view {
+        max-width: 50vw;
+        min-width: 40rem;
+    }
+    .left {
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+        &-title {
+            font-weight: 700;
+        }
+        &-prices {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5vw;
+            &_title {
+                color: rgb(89, 98, 106);
+                padding: 0.5rem 0;
+            }
+            &_price {
+                color: #fff;
+            }
+        }
+    }
+    .right {
+        width: 50%;
+        max-width: 300px;
+        overflow: hidden;
+        object-fit: cover;
+        &-img {
+            max-width: 300px;
+        }
+    }
+}

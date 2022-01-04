@@ -1,0 +1,127 @@
+@use "../styles/" as *;
+nav {
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .nav-search {
+        border-radius: 10px;
+        border: none;
+        font-size: 18px;
+        color: white;
+        background-color: rgb(26, 37, 73);
+        padding: 10px;
+        display: none;
+        &:focus {
+            outline: none;
+        }
+        @include tablet-view() {
+            display: block;
+        }
+    }
+    h3 {
+        color: white;
+        margin: 0 15px;
+    }
+    .avatar {
+        width: 40px;
+    }
+    .ico {
+        width: 20px;
+    }
+    span {
+        color: white;
+    }
+    .toogleThemeBtn {
+        width: 40px;
+    }
+    .right-nav {
+        display: flex;
+        align-items: center;
+        * {
+            margin-right: 20px;
+        }
+    }
+    .nav-menu {
+        color: white;
+        width: 30px;
+        @include tablet-view() {
+            display: none;
+        }
+    }
+}
+
+%menu {
+    color: white;
+    position: fixed;
+    background-color: #09091f;
+    inset: 0;
+    z-index: 30;
+    transition: transform 150ms linear;
+    @include tablet-view() {
+        display: none;
+    }
+    .btn-close {
+        position: absolute;
+        width: 40px;
+        right: 30px;
+        top: 30px;
+    }
+    .menu-items {
+        .menu-icon {
+            margin: 0 25vw;
+            width: 50%;
+            max-width: 200px;
+        }
+    }
+}
+
+.menu-show {
+    @extend %menu;
+    transform: translateX(0%);
+}
+
+.menu-hide {
+    @extend %menu;
+    transform: translateX(-100%);
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    background-color: #000d2a;
+    display: none;
+    @include tablet-view() {
+        display: block;
+    }
+    &-item {
+        display: flex;
+        justify-content: flex-start;
+        padding: 10px;
+        margin: 0 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover {
+            background-color: #1b6dfe;
+        }
+    }
+    &-icon {
+        width: 3rem;
+        padding: 10px;
+    }
+    &-icon-container {
+        background-color: #241d79;
+        border-radius: 50%;
+    }
+    &-title {
+        color: white;
+        font-size: 24px;
+        padding: 10px;
+    }
+}

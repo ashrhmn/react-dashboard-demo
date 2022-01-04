@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import "./Nav.scss";
+
 import avatar from "../assets/avatar.png";
 import toogleThemeIcon from "../assets/monitor-levels.png";
 import notificationIcon from "../assets/icons8_notification_96px_1.png";
@@ -83,7 +85,11 @@ const MenuView = ({ menuItem, isMenuSHown, setIsMenuShown }) => {
         </div>
         <div className="nav-items">
           {menuItem.map((item) => (
-            <div className="sidebar-item" key={item.title}>
+            <div
+              onClick={() => setIsMenuShown(false)}
+              className="sidebar-item"
+              key={item.title}
+            >
               <div className="sidebar-icon-container">
                 <img className="sidebar-icon" src={item.img} alt="" />
               </div>
