@@ -1,8 +1,6 @@
 import React from "react";
-import CardView from "./components/CardView";
 import Nav from "./components/Nav";
 import SideBar from "./components/SideBar";
-import Slider from "./components/Slider";
 // import "./main.scss";
 import "./App.scss";
 
