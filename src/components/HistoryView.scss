@@ -1,0 +1,58 @@
+@use "../styles/" as *;
+.history-view {
+    // background-color: red;
+    color: white;
+    // margin: 20px 0;
+    // font-size: 20px;
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    .table-image {
+        width: 25px;
+        @include desktop-view() {
+            width: 2vw;
+        }
+    }
+    th {
+        padding: 10px;
+    }
+    td {
+        padding: 10px;
+        width: 15vw;
+        text-align: center;
+        button {
+            width: 8rem;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            @include desktop-view() {
+                width: 9vw;
+                padding: 1vw 1vw;
+                border-radius: 1.5vw;
+            }
+            border: none;
+            color: white;
+            white-space: nowrap;
+        }
+        .blue-button {
+            background-color: rgb(27, 109, 254);
+            font-size: 1rem;
+            @include desktop-view() {
+                font-size: 1vw;
+            }
+        }
+        .purple-button {
+            background-color: rgb(49, 40, 156);
+            font-size: 1rem;
+            @include desktop-view() {
+                font-size: 1vw;
+            }
+        }
+        .orange-button {
+            background-color: rgb(248, 69, 77);
+            font-size: 1rem;
+            @include desktop-view() {
+                font-size: 1vw;
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+@use "../styles/" as *;
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    background-color: #000d2a;
+    display: none;
+    font-size: 1vw;
+    @include tablet-view() {
+        display: block;
+    }
+    &-item {
+        display: flex;
+        justify-content: flex-start;
+        padding: 10px;
+        margin: 0 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover {
+            background-color: #1b6dfe;
+        }
+        &-active {
+            background-color: #1b6dfe;
+        }
+    }
+    &-icon {
+        width: 3rem;
+        padding: 10px;
+    }
+    &-icon-container {
+        background-color: #241d79;
+        border-radius: 50%;
+    }
+    &-title {
+        color: white;
+        font-size: 24px;
+        padding: 10px;
+    }
+}

@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./HistoryView.scss"
+
 import tokenIcon from "../assets/PNG_image_4__1_-removebg-preview (1).png";
 
 const HistoryView = () => {

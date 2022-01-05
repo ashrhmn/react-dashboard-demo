@@ -2,14 +2,18 @@
 $color-dot: rgb(37, 34, 118);
 $color-dot: white;
 .slider {
+    // background-color: red;
     margin: 10px;
     @include desktop-view() {
-        max-width: 50vw;
+        // width: 55vw;
+        width: 59%;
+        max-width: 110rem;
     }
     &-image {
         width: 100%;
         @include desktop-view() {
-            max-width: 50vw;
+            max-width: 110rem;
+            // width: 47vw;
         }
     }
 }

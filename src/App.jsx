@@ -76,10 +76,16 @@ const App = () => {
 
   return (
     <div>
+      <SideBar items={sideBarItems} />
       <Nav menuItem={sideBarItems} />
-      <div className="top-section">
-        <ImageSlider />
-        <RightCards cardData={cardData} />
+      <div className="body-section">
+        <div className="top-section">
+          <ImageSlider />
+          <RightCards cardData={cardData} />
+        </div>
+        <div>
+          <HistoryView />
+        </div>
       </div>
     </div>
   );

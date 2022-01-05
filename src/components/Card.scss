@@ -6,22 +6,26 @@
     background-color: rgb(17, 24, 46);
     padding: 2rem;
     margin: 2rem auto;
+    overflow: hidden;
     // max-width: 50rem;
     // min-width: 40rem;
     width: 90%;
     gap: 1rem;
     @include tablet-view {
         max-width: 40vw;
-        min-width: unset;
+        // min-width: unset;
     }
     @include desktop-view {
-        max-width: 50vw;
-        min-width: 40rem;
+        max-width: 65rem;
+        // width: fit-content(45rem);
+        // min-width: 35rem;
+        width: 30vw;
     }
     .left {
         display: flex;
         flex-direction: column;
         gap: 2vw;
+        width: 50%;
         &-title {
             font-weight: 700;
         }
@@ -39,12 +43,12 @@
         }
     }
     .right {
-        width: 50%;
+        // width: 50%;
         max-width: 300px;
         overflow: hidden;
         object-fit: cover;
         &-img {
-            max-width: 300px;
+            width: 200px;
         }
     }
 }

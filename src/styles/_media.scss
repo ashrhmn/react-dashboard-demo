@@ -15,6 +15,12 @@
     }
 }
 
+@mixin unlimited-view {
+    @media screen and (min-width: 2190px) {
+        @content;
+    }
+}
+
 // @mixin mobile-view {
 //     @media screen and (min-width: 0px) and (max-width: 993px) {
 //         @content;

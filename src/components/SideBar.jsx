@@ -1,18 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
-import sideBarIcon from '../assets/PNG_image_6-removebg-preview.png'
+import "./SideBar.scss";
+
+import sideBarIcon from "../assets/PNG_image_6-removebg-preview.png";
 
 const SideBar = ({ items }) => {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
   return (
     <div className="sidebar">
-      <img
-        style={{ width: "250px" }}
-        src={sideBarIcon}
-        alt=""
-      />
+      <img style={{ width: "250px" }} src={sideBarIcon} alt="" />
       <div className="nav-items">
-        {items.map((item) => (
-          <div className="sidebar-item" key={item.title}>
+        {items.map((item, index) => (
+          <div
+            className={`sidebar-item ${
+              index == selectedIndex ? "sidebar-item-active" : ""
+            }`}
+            onClick={() => setSelectedIndex(index)}
+            key={item.title}
+          >
             <div className="sidebar-icon-container">
               <img className="sidebar-icon" src={item.img} alt="" />
             </div>
